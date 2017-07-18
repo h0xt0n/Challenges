@@ -1,0 +1,26 @@
+[NDH2K17] Cryptographie - Niroy
+
+Énoncé : Rewind
+
+Ce challenge nous mettait devant une vidéo au format mp4.
+
+Avant de s'attaquer au contenu, faisons le tour du propriétaire, et
+des propriétés.
+
+Dans les commentaires, on pouvait lire ceci : YEKEHTSINIROY
+
+À ma grande surprise, ça ne flag pas, même en inversant les caractères 
+(référence à l'énoncé du challenge)
+
+Dans la vidéo en elle-même on peut voir une suite de caractères défiler,
+une fois extrait, on obtient ceci : k4j79lw1u02n5383n8983356_71s2yrl
+
+_71s2yrl ça ressemble étrangement à un vigenere de "ndh2k17_" , essayons
+ça avec le string trouvé plus tôt.
+
+Texte : lry2s17_6533898n3835n20u1wl97j4k
+Clé : YORINISTHEKEY
+
+Et on flag ! ndh2k17_6533898a3835f20c1de97f4a
+
+Par curiosité, j'ai passé le son dans Sonic Visualizer, j'ai trouvé ça : THIS NDH IS AWSM
