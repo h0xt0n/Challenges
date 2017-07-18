@@ -1,0 +1,22 @@
+Stegano - Niroy_step_3
+
+Énoncé : Lurk moar !
+
+On attaque cette dernière étape avec une simple image qui ne me résistera pas bien longtemps,
+un coup de binwalk nous sort 4 fichiers dont (encore) une archive : my_precious.zip
+
+L'archive 97A9.zip se déverouillait en utilisant le string trouvé dans la photo du CV de l'étape
+précédente.
+
+On trouve également 2 images blanches faisant la même taille, ça ne me dit rien qui vaille, et 
+stegsolve confirme mes soupçons, on voit un texte qui apparait, il suffira de superposer les 2 images
+pour récupérer un string qui déverouille my_precious.zip.
+
+On trouve également une vidéo qui nous indique que ce n'est pas le flag, il y a pourtant une information
+dans les commentaires du fichier "hollowaynz is good at steg", Internet nous donnera sûrement la réponse.
+
+http://holloway.co.nz/steg/
+
+Il ne nous reste plus qu'à passer notre texte dans la partie "decode" et le flag apparaît, FIOU !
+
+ndh2k17_cb6da79d2b18c1f3582cbb7b
