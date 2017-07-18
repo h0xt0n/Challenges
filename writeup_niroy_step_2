@@ -1,0 +1,74 @@
+Forensic - Niroy_step_2 
+
+Énoncé : Keep digging
+
+On commence avec une archive .zip où les fichiers sont protégés par un mot de passe.
+
+Je reprends le string trouvé dans l'étape précédente, ce qui déverouille l'archive, nous
+donnant accès à une nouvelle archive, PRIVATE.zip protégée par un mot de passe ainsi qu'un C.V.
+
+Une fois les trolls et autres boutades encaissées, et ayant vu Mr Robot, j'active mes psycho pouvoirs
+de joueur CTF et je me lance dans un petit guessing de password pour l'archive PRIVATE.zip.
+
+barney15031986 permet d'obtenir accès ...à 1811 dossiers et 750 fichiers, ça fait beaucoup de données...
+
+ls -R semble nous indiquer quelque chose, "tree is a great tool", nous allons en avoir le coeur net,
+
+tree -h m'indique que la plupart des fichiers sont vides, ça sera plus facile d'identifier si quelque chose
+sort de l'ordinaire. J'ajoute l'option -f pour afficher le chemin entier de chaque fichier trouvé, et fini
+par tomber sur ça dans ./1/1/0/0/4
+
+Vm0wd2QyUXlVWGxWV0d4V1YwZDRWMVl3WkRSV01WbDNXa1JTVjAxV2JETlhhMUpUVjBaS2RHVkdX
+bFpOYWtFeFZtcEJlRll5U2tWVQpiR2hvVFdzd2VGWnRjRUpsUmxsNVUydFdWUXBpUjJodlZGWldk
+MVpXV25SalJVcHNVbXhzTlZVeWRGZFdVWEJwVWpKb2RsWkdaSHBrCk1sWkhWMjVTYWxKWVVsVlVW
+bFV4VTFaYWRHUkdaRlphTTBKd1ZteGFkMWRXV25STlZGSnFDazFFUWpSV01qVlRZV3hLVm1OSVRs
+WmkKVkVaVVZURmFZV1JIVWtkYVJscGhUVEJLZDFadGVHRmtNVnBYVjI1U2FsSllVbkJEYXpGelYy
+eG9WMDFxVmxSV1IzaGhVakZPYzFacwpWbGNLVFRBME1GWkhlR0ZaVms1SVZXdHNWV0pYYUdoVVZF
+SkxWbFprV0dWSGRHbE5iRXA2VmpKMGExZEhTbFZpUms1RVlYcEdXRll5CmVHOVdNREZ4Vm14U1dt
+RXhjRXhaZWtwUFUxWlNjd3BYYld0TFZqQmtiMDVzV2toa1IwWllZbFphVjFSc1dtRlpWa3AwVld4
+a1YwMUcKV2t4YVJFWmhWMGRPUm1SSGJFNWlSWEEyVm1wS01HRXhiRmRVYTJ4U1ltdHdSVmxZY0Vk
+bGJGbDVDbVJIT1ZkTlJFWjRWbTEwYjFZeQpSWGxWYTJoYVpXdGFVRnBGV2t0amQzQmhVakprVEZk
+V1VrZGtNVkpYVjJ4V1UySlZXbUZXYWtaTFUxWmFXR1JIT1doTlZXdzFXVlZhCmExWXdNVWNLVjJ0
+NFYySkdjSEpXTUdSVFUwWktkR1JGTlZkTlZYQmFWbXBLTUZsWFNYbFNXR2hVWVd4d2NGVnRjekZT
+Vm14WlkwVmsKV0ZKc2JEVkRiVlpJVDFab1UwMUdXVEJYVkVKdlV6RmtSd3BYYms1cVVsaG9WMWxY
+ZEdGVlJtdzJVbTFHYW1RelFsaFphMlJQVkVaYQpSMVZyZEdsTlZrcFlWako0VjFWdFNsWlhiVVpY
+WVd0YVRGVnFSbE5qTVdSMFVteHdWMkV6UWpaWFZFSnJDbUl4V2xkWGExbExWVEowCk5GbFdTa1pY
+YldoWFRVWldORlpzV2xka1IxSkdUbFprVGxaWVFtRldiWEJMVFVac1dGTlliRk5YUjJoVldWZDRk
+Mk5HVm5SamVrWlQKVm0xNFdsa3dWbXNLVjBaS2MySkVWa1JpVmxwSlZERmFiMVV3TVVkWFZFSllW
+a1ZLZGxWNlJscGxVWEJUWW10d2NWVnNhRzlYUm14egpZVWM1YW1KSVFrZFdNblF3WVcxUmVsRnRh
+RlpoYTNCeVZrVmFhd3BXTVZaeVdrZDBUbFpyY0ZsV2FrbzBWakZWZVZOc1dsaGlWVnBZCldWZDBZ
+VlJHVlhoWGJVWllVakZLU2xaSGVHdFdNREZKVVd0d1YySkhUWGhEYkUxNFYyeGtXR0V4YkV4V1ZF
+b3dDazVHYkZkVGExcFkKWWxkb1dGbHJXbmRUUm13MlVtNWtVMDFXV25sVWJHUnpWVEZhZEdSRVRs
+ZGlXRUpNVkZWYWMxZEdUbGxpUmxKb1RXeEtWbGRYTVRCawpNVlpIVjFoa1YySlZXbFFLVm0weE5H
+VnNXblJPVjNOTFZqQmFTMk15U2tWV2ExSm9aV3hhWVZZeWRHRmhNVkp6VTJ0YVdGZEhhRmxXCmJY
+aGhZVVpzY1ZKc2NHeFZXRUpWV1ZSS2IxWXhiRlZVYlRsWVVteEtXQXBXTWpWclYwWktkVkZyYUZk
+TmJrMHhXVmN4VW1Wc1JuVlMKYkZwb1lUTkNlVlpyVm1GWlVYQlRUVmRTTUZWdE1UQlViRnB5WTBa
+c1YyRnJhM2hXUkVaaFpFWktXV0pHV21saE1YQlhDbFp0Y0U5aQpNVkpIVjFob1dHSkdjSE5WYWtK
+aFUyeGtjbGR1WkZkTmExWTJWVmR3WVZZeFdrWmhNMmhFWWtVeE5GWXllR3RYUm1SSVQxVjRWMVp0
+ClRYaERiRmw0VjJ4b1ZHRXlVbkVLVld4a1UyRkdXblJsU0dSc1lrWktNRlJXVmpCVk1ERldZMGh3
+VjAxdWFISlphMlJMVjBaU1dXRkcKWkZkaVJYQk5WMVprZWs1V1dYaFNiazVVWWxkNGMxbFhkRXRV
+VmtWNVdYcHNVUXBWVnpnNVEyYzlQUW89Cg==
+
+Oooooh, du base64, décodons tout ça.
+
+[2/4]1b7bfdbb
+
+On a donc 3 autres strings à trouver, et je sais maintenant ce que je dois chercher
+tree -hf | grep 2.2K ne me retourne que 4 fichiers, décodés et remis dans l'ordre, on peut
+reconstituer notre flag : ndh2k17_1b7bfdbbbc16b6efc64b1970
+
+J'ai dû revenir sur ce challenge pour accéder à l'étape 3, le CV n'avait pas révélé tout ses secrets, 
+petite explication : 
+
+Les fichiers OpenDocument ne sont en fait que des fichiers .zip , il est donc possible d'extraire les données brutes
+du CV.
+
+C'est la photo sur le CV qui attire mon attention, m'étant cassé les dents sur un CTF précédent et ne sachant pas 
+trop quoi chercher, je lance un steghide à vide et bingo ! 
+
+stehide extract -sf 10000000000000AD000000D13E18D1B723ECCF9C.jpg
+
+[keep this aside]
+452b11df7a27058c1f300cd1ab73e74f
+
+
